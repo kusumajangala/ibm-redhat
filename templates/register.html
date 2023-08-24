@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Login Page</title>
+
+<style type="text/css">
+	body{
+		background-color: blue;
+	}
+</style>
+</head>
+<body>
+		<h2 style="background-color: green;">Please Enter the Details for registration</h2>
+		<form action="/register1", method = "post">
+			<input type="text" name="NAME" placeholder="NAME" required = "">
+			<input type="email" name="EMAIL" placeholder="EMAIL" required = "">
+			<input type="password" name="PASSWORD" placeholder="PASSWORD" required = "">
+			<button>Register</button>
+			
+		</form>
+		{{pred}}
+
+</body>
+<script>
+	window.watsonAssistantChatOptions = {
+	  integrationID: "c89a1911-8489-468e-9da7-6b4c76c6667b", // The ID of this integration.
+	  region: "eu-gb", // The region your integration is hosted in.
+	  serviceInstanceID: "f1fdcdf3-4630-4c17-81e4-0e6da574ad1e", // The ID of your service instance.
+	  onLoad: function(instance) { instance.render(); }
+	};
+	setTimeout(function(){
+	  const t=document.createElement('script');
+	  t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+	  document.head.appendChild(t);
+	});
+  </script>
+</html>
